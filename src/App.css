@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+  --size-font-text: 20px;
+  --size-font-menu: 30px;
+  --size-font-ico: 50px;
+  --size-font-subtitle: 80px;
+  --size-font-title: 100px;
+  --size-font-subtitle: 80px;
+  --weight-font-medium: 400;
+  --weight-font-big: 700;
+  --color-light-grey: #7d677e;
+  --color-dark-grey: #4f2c4d;
+  --color-blue: #0c082f;
+  --color-light-blue: #5153ff;
+  --color-beige: #ccc9aa;
+  --color-cream: #fafdea;
+}
+
+html {
+  height: 100%;
+  font-family: 'Bebas Neue', cursive;
+}
+body {
+  height: 100%;
+  background-color: var(--color-cream);
+}
+
+.nav-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue);
+}
+
+.menu-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  color: var(--color-light-blue);
+  text-decoration: none;
+}
+
+.item-menu{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px;
+  font-size: var(--size-font-menu);
+  font-weight: var(--weight-font-big);
+  text-decoration: none;
+  transition: all 0.1s ease-out;
+}
+
+.item-menu:hover, .cart-ico:hover{
+  transform: scale(1.1, 1.1);
+  text-decoration: underline;
+  transition: all 0.1s ease-out;
+}
+
+.img-menu{
+  display: inline;
+  width: 200px;
+  align-items: center;
+  margin: 0 60px;
+}
+
+.cart-ico{
+  display: flex;
+  color: var(--color-light-blue);
+  font-size: var(--size-font-ico);
+  margin-left: 450px;
+}
+
+/* Título del Saludo */
+.titulo-saludo{
+  font-size: var(--size-font-title);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 400px;
+  color: var(--color-dark-grey);
+}
