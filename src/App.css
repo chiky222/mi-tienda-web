@@ -67,6 +67,12 @@ a{
   width: 200px;
   align-items: center;
   margin: 0 60px;
+  transition: all 0.1s ease-out;
+}
+
+.img-menu:hover{
+  transform: scale(1.1,1.1);
+  transition: all 0.1s ease-out;
 }
 
 .cart-ico{
