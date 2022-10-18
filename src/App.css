@@ -39,7 +39,7 @@ body {
   align-items: center;
 }
 
-a{
+.nav-header a{
   color: var(--color-light-blue);
   text-decoration: none;
 }
