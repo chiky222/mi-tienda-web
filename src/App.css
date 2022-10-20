@@ -79,7 +79,7 @@ body {
   display: flex;
   color: var(--color-light-blue);
   font-size: var(--size-font-ico);
-  margin-left: 450px;
+  margin-left: 50px;
 }
 
 /* Título del Saludo */
@@ -89,6 +89,56 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 400px;
+  height: 200px;
   color: var(--color-dark-grey);
 } 
+
+/* Estilos de Contador */
+.visor{
+  display: flex;
+  border-style: solid;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 2px solid var(--color-blue);
+  margin: 0 auto;
+  width: 200px;
+  color: var(--color-blue);
+}
+
+.buttonAdd{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cream);
+  background-color: var(--color-blue);
+  height: 30px;
+  border: none;
+}
+
+.buttonAdd:hover{
+  transform: scale(1.1, 1.1);
+  transition: all 0.1s ease-out;
+}
+
+.buttonAdd:disabled{
+  background-color: #7a78a3;
+  user-select: none;
+}
+
+.plusIcon,
+.minusIcon{
+  cursor: pointer;
+  user-select: none;
+}
+
+.plusIcon:hover,
+.minusIcon:hover{
+  transform: scale(1.1, 1.1);
+  transition: all 0.1s ease-out;
+}
+
+.contador{
+  font-size: var(--size-font-text);
+  font-weight: 800;
+}
