@@ -29,7 +29,7 @@ const ItemListContainer = ({greeting}) => {
   return (
     <>
         <h1 className='titulo-saludo'>{greeting}</h1>
-        <h4 className='subtitulo-pie'>LLevate uno de los cuadros de Edición Limitada de Lionel Messi, de imágenes generadas con Inteligencia Artificial.<br></br>Para crearlas se utilizaron tecnologías como Stable Diffusion y OpenAi Dall-E 2.</h4>
+        <h4 className='subtitulo-pie'>LLevate uno de los cuadros de Edición Limitada de Lionel Messi, de imágenes generadas con Inteligencia Artificial.<br></br>Para crearlas se utilizaron tecnologías como Stable Diffusion y OpenAi Dall-E 2.<br></br><br></br></h4>
         {/* <ItemCount stock={5} initial={0} onAdd={(count) => console.log(count)} /> */}
         <ItemList items={items} />
     </>
