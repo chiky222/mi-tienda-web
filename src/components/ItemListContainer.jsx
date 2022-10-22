@@ -1,18 +1,37 @@
-import React from 'react';
-import ItemCount from './ItemCount';
+import React, { useEffect } from 'react';
+//import ItemCount from './ItemCount';
+import productos from '../Mock/Productos';
+import {useState} from 'react';
+import ItemList from './ItemList';
 
 const ItemListContainer = ({greeting}) => {
 
-  // const addCant = (cant) => {
-  //   console.log(cant);
-  // }
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const getProductos = () => {
+      return new Promise((resolv, reject) => {
+        setTimeout(() => {
+          resolv(productos);
+        }, 2000);
+      });
+    };
+    getProductos()
+      .then((resolv) => {
+        setItems(resolv);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
 
   return (
     <>
-      <div>
         <h1 className='titulo-saludo'>{greeting}</h1>
-        <ItemCount stock={5} initial={0} onAdd={(count) => console.log(count)} />
-      </div>
+        <h4 className='subtitulo-pie'>LLevate uno de los cuadros de Edición Limitada de Lionel Messi, de imágenes generadas con Inteligencia Artificial.<br></br>Para crearlas se utilizaron tecnologías como Stable Diffusion y OpenAi Dall-E 2.</h4>
+        {/* <ItemCount stock={5} initial={0} onAdd={(count) => console.log(count)} /> */}
+        <ItemList items={items} />
     </>
   )
 };
