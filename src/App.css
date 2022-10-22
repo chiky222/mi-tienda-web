@@ -210,4 +210,6 @@ article .visor button{
 .item-container{
   display: inline-block;
   margin-left: 100px;
+  height: 200px;
+  color: var(--color-dark-grey);
 }
