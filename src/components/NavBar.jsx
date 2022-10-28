@@ -1,18 +1,21 @@
 import React from 'react';
 import CartWidget from './CartWidget';
+import {GiHamburgerMenu} from 'react-icons/gi';
+import {NavLink} from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <>
         <header className='header-container'>
             <nav className='nav-header'>
-                <ul className='menu-nav'>
-                    <li className='item-menu'><a href="">Home</a></li>
-                    <li className='item-menu'><a href="">Tienda</a></li>
-                    <img className='img-menu' src='tiendAR.svg' alt='logo' />
-                    <li className='item-menu'><a href="">Nosotros</a></li>
-                    <li className='item-menu'><a href="">Contacto</a></li>
-                    <a href=''><CartWidget /></a>
+                <a className='hamb-ico' ><GiHamburgerMenu /></a>
+                <ul className='menu-nav hide'>
+                    <li className='item-menu'><NavLink className="links" to="/category/Oro">Oro</NavLink></li>
+                    <li className='item-menu'><NavLink className="links" to="/category/Plata">Plata</NavLink></li>
+                    <NavLink className="links" to="/" ><img className='img-menu' src='tiendAR.svg' alt='logo'></img></NavLink>
+                    <li className='item-menu'><NavLink className="links" to="/category/Bronce">Bronce</NavLink></li>
+                    <li className='item-menu'><NavLink className="links" to="/">Todas</NavLink></li>
+                    <NavLink className="links" to="/cart"><CartWidget /></NavLink>
                 </ul>
             </nav>
         </header>
