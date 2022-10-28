@@ -14,6 +14,7 @@
   --color-light-blue: #5153ff;
   --color-beige: #ccc9aa;
   --color-cream: #fafdea;
+  --color-pink: #FF533D;
 }
 
 html {
@@ -21,6 +22,7 @@ html {
 }
 body {
   background-color: var(--color-cream);
+  box-sizing: border-box;
 }
 
 
@@ -34,10 +36,20 @@ body {
   box-shadow: 0px 0px 8px 0.5px var(--color-dark-grey);
 }
 
+.header-container .nav-header .hamb-ico{
+  display: none;
+}
+
 .menu-nav{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.menu-nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-header a{
@@ -63,7 +75,7 @@ body {
   transform: scale(1.1, 1.1);
   text-decoration: underline;
   transition: all 0.1s ease-out;
-  filter: sepia(1);
+  color: var(--color-pink);
 }
 
 .img-menu{
@@ -71,13 +83,12 @@ body {
   width: 200px;
   align-items: center;
   margin: 0 60px;
-  transition: all 0.1s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .img-menu:hover{
   transform: scale(1.1,1.1);
   transition: all 0.1s ease-out;
-  filter: sepia(1);
 }
 
 .cart-ico{
@@ -97,11 +108,11 @@ body {
   align-items: center;
   text-align: center;
   height: 100px;
-  color: var(--color-dark-grey);
+  color: var(--color-blue);
 } 
 
 .subtitulo-pie{
-  color: var(--color-dark-grey);
+  color: var(--color-blue);
   font-size: var(--size-font-menu);
   font-weight: var(--weight-font-medium);
   justify-content: center;
@@ -167,7 +178,7 @@ body {
 /* Items & Container */
 
 .item-card{
-  display: inline-block;
+  display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -178,8 +189,6 @@ body {
   border-radius: 180px;
   transition: all 0.1s ease-out;
   box-shadow: 0px 0px 8px 0.2px var(--color-blue);
-  margin-top: 70px;
-  margin-bottom: 20px;
 }
 
 .item-card img:hover{
@@ -192,23 +201,26 @@ body {
 
 .item-card h2{
   font-size: var(--size-font-menu);
-  color: var(--color-dark-grey);
+  color: var(--color-blue);
   margin-top: -5px;
   margin-bottom: -10px;
 }
 
 .item-card h3{
   font-size: var(--size-font-menu);
-  color: var(--color-dark-grey);
+  color: var(--color-blue);
   margin-top: -30px;
 }
 
 .item-card .text-description{
-  color: var(--color-dark-grey);
+  color: var(--color-blue);
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   padding-top: -20px;
   padding-bottom: 20px;
+  width: 175px;
 }
 
 article .visor{
@@ -218,6 +230,13 @@ article .visor{
   color: var(--color-cream);
   border-radius: 15px;
   opacity: 0.9;
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 article .visor button{
@@ -293,6 +312,28 @@ footer{
   box-shadow: 0px 0px 8px 0.5px var(--color-dark-grey);
 }
 
+.detail{
+  display: flex;
+  margin: 50px auto;
+  border-radius: 60px;
+  background-color: var(--color-light-blue);
+  box-shadow: 0px 0px 8px 0.5px var(--color-dark-grey);
+  max-width: 600px;
+}
+
+.detail .visor{
+  background-color: var(--color-cream);
+  color: #0c082f;
+}
+
+.item-card .detail h4, h3, h2, p{
+  color: var(--color-blue)!important;
+}
+
+.item-card img{
+  margin: 20px 10px 20px;
+}
+
 
 
 
@@ -300,8 +341,28 @@ footer{
 /* Media Responsive */
 @media screen and (max-width: 1200px) {
 
-  html, body{
-    width: 100vw;
+  .menu-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 300px;
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .header-container .nav-header .hamb-ico{
+    display: flex;
+    flex: 1;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: var(--size-font-ico);
+  }
+
+  #root > header > nav > a > svg > path:hover{
+    filter: sepia(1);
+    transition: all 0.5s ease-in-out;
   }
 
   .item-container{
@@ -318,10 +379,19 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  .titulo-saludo{
+    font-size: var(--size-font-subtitle);
+    height: 50px;
+  } 
+  
+  .subtitulo-pie{
+    font-size: var(--size-font-text);
+  }
 }
 
 @media screen and (max-width: 800px) {
-
+/* aca hay que poner el menú del footer vertical */
   .item-container{
     display: flex;
     flex-direction: row;
@@ -334,9 +404,31 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 135px;
+  }
+  
+  .navbar-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+  }
+  
+  .navbar-footer ul{
+    display: none;
+    /* align-items: center;
+    justify-content: space-evenly;
+    padding-left: 0; */
+  }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
 
   .item-container{
     display: flex;
