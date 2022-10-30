@@ -33,7 +33,7 @@ const ItemListContainer = ({titulo}) => {
   return (
     <>
         <h1 className='titulo-saludo'>{titulo}</h1>
-        <h4 className='subtitulo-pie'>LLevate uno de los cuadros de Edición Limitada de Lionel Messi, de imágenes generadas con Inteligencia Artificial.<br></br>Para crearlas se utilizaron tecnologías como Stable Diffusion y OpenAi Dall-E 2.<br></br><br></br></h4>
+        <h4 className='subtitulo-pie'>LLevate uno de los NFT Edición Limitada de Lionel Messi, de imágenes generadas con Inteligencia Artificial.<br></br>Para crearlas se utilizaron tecnologías como Stable Diffusion y OpenAi Dall-E 2.<br></br><br></br></h4>
         <ItemList items={items} />
     </>
   )

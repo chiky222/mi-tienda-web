@@ -1,5 +1,6 @@
 import React from 'react';
 import {SlSocialInstagram, SlSocialLinkedin, SlSocialGithub, SlSocialTwitter} from 'react-icons/sl';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -11,13 +12,12 @@ const Footer = () => {
         <a href='https://twitter.com/ChikyF22'><SlSocialTwitter /></a>
       </div>
       <ul>
-        <li><a href='#'>Home</a></li>
-        <li><a href='#'>Tienda</a></li>
-        <li><a href='#'>Nosotros</a></li>
-        <li><a href='#'>Contacto</a></li>
+        <NavLink to='/' ><li>Home</li></NavLink>
+        <a href='https://opensea.io/es/collection/messi-hollywood'>Opensea</a>
+        <NavLink to='/contact' ><li>Contacto</li></NavLink>
       </ul>
       <p>
-        <b>TiendAR</b> - All Rights Reserved ©<br></br>Created by Chiky
+        <b>eNeFeTe</b> - All Rights Reserved ©<br></br>Created by Chiky
       </p>
     </footer>
   )
