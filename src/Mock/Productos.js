@@ -2,7 +2,7 @@ const productos = [
     {
         id: 0,
         title: 'Thanos Messi',
-        description: 'Cuadro de Lionel Messi como Thanos.',
+        description: 'NFT de Lionel Messi como Thanos.',
         price: 3000,
         stock: 17,
         category: 'Oro',
@@ -11,7 +11,7 @@ const productos = [
     {
         id: 1,
         title: 'Starwars Messi',
-        description: 'Cuadro de Lionel Messi en Starwars.',
+        description: 'NFT de Lionel Messi en Starwars.',
         price: 2000,
         stock: 20,
         category: 'Plata',
@@ -20,7 +20,7 @@ const productos = [
     {
         id: 2,
         title: 'Stark Messi',
-        description: 'Cuadro de Lionel Messi como Eddard Stark.',
+        description: 'NFT de Lionel Messi como Eddard Stark.',
         price: 2000,
         stock: 10,
         category: 'Plata',
@@ -29,7 +29,7 @@ const productos = [
     {
         id: 3,
         title: 'Snow Messi',
-        description: 'Cuadro de Lionel Messi como Jon Snow.',
+        description: 'NFT de Lionel Messi como Jon Snow.',
         price: 3000,
         stock: 5,
         category: 'Oro',
@@ -38,7 +38,7 @@ const productos = [
     {
         id: 4,
         title: 'Lannister Messi',
-        description: 'Cuadro de Lionel Messi como Jaime Lannister.',
+        description: 'NFT de Lionel Messi como Jaime Lannister.',
         price: 2000,
         stock: 11,
         category: 'Plata',
@@ -47,7 +47,7 @@ const productos = [
     {
         id: 5,
         title: 'King Messi',
-        description: 'Cuadro de Lionel Messi como El Rey.',
+        description: 'NFT de Lionel Messi como El Rey.',
         price: 3000,
         stock: 3,
         category: 'Oro',
@@ -56,7 +56,7 @@ const productos = [
     {
         id: 6,
         title: 'Jedi Messi',
-        description: 'Cuadro de Lionel Messi como Jedi en Starwars.',
+        description: 'NFT de Lionel Messi como Jedi en Starwars.',
         price: 2000,
         stock: 20,
         category: 'Plata',
@@ -65,7 +65,7 @@ const productos = [
     {
         id: 7,
         title: 'Hulk Messi',
-        description: 'Cuadro de Lionel Messi como Hulk.',
+        description: 'NFT de Lionel Messi como Hulk.',
         price: 1500,
         stock: 10,
         category: 'Bronce',
@@ -74,7 +74,7 @@ const productos = [
     {
         id: 8,
         title: 'Gladiator Messi',
-        description: 'Cuadro de Lionel Messi como un Gladiador.',
+        description: 'NFT de Lionel Messi como un Gladiador.',
         price: 2000,
         stock: 8,
         category: 'Plata',
@@ -82,8 +82,8 @@ const productos = [
     },
     {
         id: 9,
-        title: 'Barcelona Warrior Messi',
-        description: 'Cuadro de Lionel Messi como caballero del Barcelona.',
+        title: 'Warrior Messi',
+        description: 'NFT de Lionel Messi como caballero del Barcelona.',
         price: 1500,
         stock: 1,
         category: 'Bronce',
@@ -92,7 +92,7 @@ const productos = [
     {
         id: 10,
         title: 'Negan Messi',
-        description: 'Cuadro de Lionel Messi como Negan en The Walking Dead.',
+        description: 'NFT de Lionel Messi como Negan en The Walking Dead.',
         price: 3000,
         stock: 11,
         category: 'Oro',
@@ -101,7 +101,7 @@ const productos = [
     {
         id: 11,
         title: 'Cold Prince Messi',
-        description: 'Cuadro de Lionel Messi como un Príncipe.',
+        description: 'NFT de Lionel Messi como un Príncipe.',
         price: 1500,
         stock: 4,
         category: 'Bronce',
@@ -109,8 +109,8 @@ const productos = [
     },
     {
         id: 12,
-        title: 'Lion Warrior Messi',
-        description: 'Cuadro de Lionel Messi como guardia de la casa Lannister.',
+        title: 'Lion Messi',
+        description: 'NFT de Lionel Messi como guardia de la casa Lannister.',
         price: 1500,
         stock: 6,
         category: 'Bronce',
