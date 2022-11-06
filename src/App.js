@@ -6,11 +6,23 @@ import NavBar from './components/NavBar';
 import Cart from './components/Cart';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Contact from './components/Contact';
+import CartProvider from './context/CartContext';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <CartProvider>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={ <ItemListContainer titulo='Colección NFT de Messi Hollywood' />}/>
+            <Route path='/category/:categoryName' element={ <ItemListContainer titulo='Colección NFT de Messi Hollywood' />}/>
+            <Route path='/detail/:idProd' element={ <ItemDetailContainer />}/>
+            <Route path='/cart' element={ <Cart /> }/>
+            <Route path='/contact' element={ <Contact /> }/>
+          </Routes>
+          <Footer />
+        </CartProvider>
         <NavBar />
         <Routes>
           <Route path='/' element={ <ItemListContainer titulo='Colección NFT de Messi Hollywood' />}/>
