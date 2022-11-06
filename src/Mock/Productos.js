@@ -82,7 +82,7 @@ const productos = [
     },
     {
         id: 9,
-        title: 'Barcelona Warrior Messi',
+        title: 'Warrior Messi',
         description: 'NFT de Lionel Messi como caballero del Barcelona.',
         price: 1500,
         stock: 1,
@@ -109,7 +109,7 @@ const productos = [
     },
     {
         id: 12,
-        title: 'Lion Warrior Messi',
+        title: 'Lion Messi',
         description: 'NFT de Lionel Messi como guardia de la casa Lannister.',
         price: 1500,
         stock: 6,
