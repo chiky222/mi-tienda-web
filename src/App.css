@@ -254,6 +254,13 @@ article .visor button{
   color: var(--color-dark-grey);
 }
 
+.contenedor-detalle-items{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .boton-detalle{
   font-size: var(--size-font-text);
   font-weight: var(--weight-font-big);
@@ -328,6 +335,9 @@ footer{
   box-shadow: 0px 0px 8px 0.5px var(--color-dark-grey);
 }
 
+
+/* Detalle y Visor */
+
 .detail{
   display: flex;
   margin: 50px auto;
@@ -340,6 +350,7 @@ footer{
 .detail .visor{
   background-color: var(--color-cream);
   color: #0c082f;
+  min-width: 300px;
 }
 
 .item-card .detail h4, h3, h2, p{
