@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
 
     const [items, setItems] = useState({});
-    
+    const [loading, setLoading] = useState(true);
     const { idProd } = useParams();
 
   
@@ -21,19 +21,25 @@ const ItemDetailContainer = () => {
       };
       getProductos(idProd)
         .then((resolv) => {
-          setItems(resolv);
+          setItems(resolv);          
         })
         .catch((error) => {
           console.log(error);
+        })
+        .finally(() => {
+          setLoading(false);
         });
     }, [idProd]);
   
-  
-    return (
-      <div className='contenedor-detalle-items'>
-          <ItemDetail producto={items} />
-      </div>
-    )
+    if (loading) {
+      return (<div className='contenedor-detalle-items'>
+                <h1>Cargando...</h1>
+              </div>)
+    } else {
+      return (<div className='contenedor-detalle-items'>
+                <ItemDetail producto={items} />
+              </div>)
+    }
   };
 
 export default ItemDetailContainer;
