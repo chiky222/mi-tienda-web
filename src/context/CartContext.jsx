@@ -13,13 +13,12 @@ const CartProvider = ({ children }) => {
     //console.log({...item, cantidad});
         
     if (isInCart(item.id)) {
-      const productoCart = cart.find((prod) => prod.id === item.id);
-      productoCart.cantidad += cantidad;
-      console.log(cart);
+      sumarCantidad(item, cantidad);
     } else {
       setCart([...cart, { ...item, cantidad }])
-    }
+    } 
   };
+
 
   //funcion para ver si está en el carrito
   const isInCart = (id) => {
@@ -31,10 +30,42 @@ const CartProvider = ({ children }) => {
     setCart([])
   };
 
+  //Eliminar un producto
+  const deleteOne = (id) => {
+    const prodFiltrados = cart.filter((prod) => prod.id !== id);
+    setCart(prodFiltrados);
+  }
+
+  //Funcion para Sumar Cantidad
+  const sumarCantidad = (itemPorAgregar, cantidad) => {
+    const cartActualizado = cart.map((prodDelCarrito) => {
+      if (itemPorAgregar.id === prodDelCarrito.id) {
+        const productoActualizado = {
+          ...prodDelCarrito,
+          cantidad: prodDelCarrito.cantidad + cantidad,
+        };
+        return productoActualizado;
+      } else {
+        return prodDelCarrito;
+      }
+    })    
+    setCart(cartActualizado);
+  }
+
+  //Unidades totales del carrito
+  const totalUnidades = () => {
+    let count = 0;
+    const copia = [...cart];
+    copia.forEach((prod) => {
+      count += prod.cantidad;
+    })
+    return count;
+  }
+
   //variables
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, deleteAll }}>
+    <CartContext.Provider value={{ cart, addToCart, deleteAll, deleteOne, totalUnidades }}>
         {children}
     </CartContext.Provider>
   );
