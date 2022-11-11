@@ -55,11 +55,11 @@ const CartProvider = ({ children }) => {
   //Unidades totales del carrito
   const totalUnidades = () => {
     let count = 0;
-    const copia = [...cart] || [];
+    const copia = [...cart];
     copia.forEach((prod) => {
       count += prod.cantidad;
     })   
-    return count || 0;
+    return count;
   }
 
   //variables
