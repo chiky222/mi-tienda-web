@@ -10,7 +10,6 @@ const CartProvider = ({ children }) => {
   //funciones
 
   const addToCart = (item, cantidad) => {
-    //console.log({...item, cantidad});
         
     if (isInCart(item.id)) {
       sumarCantidad(item, cantidad);
@@ -22,7 +21,7 @@ const CartProvider = ({ children }) => {
 
   //funcion para ver si está en el carrito
   const isInCart = (id) => {
-    return cart.some((prod) => prod.id === +id)
+    return cart.some((prod) => prod.id === id)
   };
 
   //funcion para vaciar el carrito
@@ -51,6 +50,7 @@ const CartProvider = ({ children }) => {
     })    
     setCart(cartActualizado);
   }
+  
 
   //Unidades totales del carrito
   const totalUnidades = () => {
