@@ -23,7 +23,7 @@ const Cart = () => {
         ))}
         <div className='total-vaciar'>
           <h2>Total: ${cart.reduce((inicial, actual) => inicial + actual.price * actual.cantidad, 0)}</h2>
-          <button className='buttonAdd' onClick={deleteAll} >Vaciar carrito</button>
+          <button className='buttonAdd' onClick={deleteAll} >Vaciar</button>
         </div>
       </div>
     )
