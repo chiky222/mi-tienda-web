@@ -18,8 +18,7 @@ const ItemListContainer = ({titulo}) => {
 
     if (categoryName === undefined) {
       getDocs(collectionProd)
-      .then((res) => {
-        
+      .then((res) => {        
         const products = res.docs.map((prod) => {
           return {
             id: prod.id,
@@ -35,7 +34,7 @@ const ItemListContainer = ({titulo}) => {
         setLoading(false);
       })
 
-      // const getProductos = (categoryName) => {   HACER CONDICIONAL PARA CATEGORIAS O TODO      
+      // const getProductos = (categoryName) => {   
       //   return new Promise((resolv, reject) => {
       //     const prodFiltrados = productos.filter((prod) => prod.category === categoryName);
       //     const ref = categoryName ? prodFiltrados : productos;
@@ -55,8 +54,7 @@ const ItemListContainer = ({titulo}) => {
     } else {
       const queryCategory = query(collectionProd, where('category', '==', categoryName));
       getDocs(queryCategory)
-      .then((res) => {
-        
+      .then((res) => {        
         const products = res.docs.map((prod) => {
           return {
             id: prod.id,
