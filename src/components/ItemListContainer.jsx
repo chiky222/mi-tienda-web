@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import productos from '../Mock/Productos';
+//import productos from '../Mock/Productos';
 import {useState} from 'react';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
+import { baseDeDatos } from '../servicios/firebaseConfig';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 const ItemListContainer = ({titulo}) => {
 
@@ -11,23 +13,64 @@ const ItemListContainer = ({titulo}) => {
   const { categoryName } = useParams();
 
   useEffect(() => {
-    const getProductos = (categoryName) => {
-      return new Promise((resolv, reject) => {
-        const prodFiltrados = productos.filter((prod) => prod.category === categoryName);
-        const ref = categoryName ? prodFiltrados : productos;
-        setTimeout(() => {
-          resolv(ref);
-        }, 500);
-      });
-    };
-    getProductos(categoryName)
-      .then((resolv) => {
-        setItems(resolv);
+
+    const collectionProd = collection(baseDeDatos, 'productos');
+    //const queryCategory = query(collectionProd, where('category', '==', categoryName));
+
+    if (categoryName === undefined) {
+      getDocs(collectionProd)
+      .then((res) => {
+        
+        const products = res.docs.map((prod) => {
+          return {
+            id: prod.id,
+            ...prod.data()
+          };
+        });
+        setItems(products);
       })
       .catch((error) => {
         console.log(error);
-      });
+      })
+
+      // const getProductos = (categoryName) => {   HACER CONDICIONAL PARA CATEGORIAS O TODO      
+      //   return new Promise((resolv, reject) => {
+      //     const prodFiltrados = productos.filter((prod) => prod.category === categoryName);
+      //     const ref = categoryName ? prodFiltrados : productos;
+      //     setTimeout(() => {
+      //       resolv(ref);
+      //     }, 500);
+      //   });
+      // };
+      // getProductos(categoryName)
+      //   .then((resolv) => {
+      //     setItems(resolv);
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
+    
+    } else {
+      const queryCategory = query(collectionProd, where('category', '==', categoryName));
+      getDocs(queryCategory)
+      .then((res) => {
+        
+        const products = res.docs.map((prod) => {
+          return {
+            id: prod.id,
+            ...prod.data()
+          };
+        });
+        setItems(products);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+    }
+
   }, [categoryName]);
+
+    
 
 
   return (
