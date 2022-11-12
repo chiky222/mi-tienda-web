@@ -58,7 +58,8 @@ const CartProvider = ({ children }) => {
     const copia = [...cart];
     copia.forEach((prod) => {
       count += prod.cantidad;
-    })   
+    })
+    console.log(count);
     return count ?? 0;
   }
 
