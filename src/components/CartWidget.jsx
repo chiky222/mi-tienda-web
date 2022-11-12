@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext';
 
 const CartWidget = () => {
 
-  const {totalUnidades} = useContext(...CartContext);
+  const {totalUnidades} = useContext(CartContext) || {};
 
   return (
     <div className={totalUnidades() !== 0 ? 'widget-nav' : 'hide'}>
