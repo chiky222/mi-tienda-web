@@ -60,7 +60,7 @@ const CartProvider = ({ children }) => {
       count += prod.cantidad;
     })
     console.log(count);
-    return count ?? 0;
+    return count;
   }
 
   //variables
