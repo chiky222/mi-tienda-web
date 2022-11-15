@@ -18,7 +18,7 @@
 }
 
 html {
-  font-family: 'Bebas Neue', cursive;
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 body {
   background-color: var(--color-cream);
@@ -57,6 +57,7 @@ body {
 button{
   color: var(--color-light-blue);
   text-decoration: none;
+  user-select: none;
 }
 
 .item-menu{
@@ -137,7 +138,7 @@ button{
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: -25px auto 40px;
+  margin: 80px auto 40px;
 }
 
 
@@ -165,6 +166,7 @@ button{
   width: 100px;
   border: none;
   font-size: var(--size-font-text);
+  user-select: none;
 }
 
 .buttonAdd:hover{
@@ -189,14 +191,20 @@ button{
 
 .plusIcon:hover,
 .minusIcon:hover{
-  transform: scale(1.2, 1.2);
+  transform: scale(1.4, 1.4);
   transition: all 0.1s ease-out;
   color: var(--color-blue);
 }
 
+.plusIcon:active,
+.minusIcon:active{
+  color: var(--color-light-blue);
+}
+
 .contador{
-  font-size: var(--size-font-text);
+  font-size: 35px;
   font-weight: 800;
+  user-select: none;
 }
 
 .hide{
@@ -329,6 +337,7 @@ footer{
   font-weight: var(--weight-font-big);
   text-decoration: none;
   color: var(--color-blue);
+  user-select: none;
 }
 
 .navbar-footer a:hover{  
@@ -469,6 +478,30 @@ footer{
   align-items: center;
 }
 
+.cart-vacio a{
+  color: var(--color-blue);
+  font-size: var(--size-font-text);
+}
+
+.cart-vacio a:hover{
+  color: var(--color-light-blue);
+}
+
+.link-carrito{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-carrito a{
+  color: var(--color-blue);
+  width: 300px;
+  font-size: var(--size-font-text);
+}
+
+.link-carrito a:hover{
+  color: #FFF;
+}
 /* Input */
 
 input{
@@ -559,6 +592,7 @@ input:focus{
   .titulo-saludo{
     font-size: var(--size-font-subtitle);
     height: 50px;
+    margin-bottom: 70px;
   } 
   
   .subtitulo-pie{
@@ -585,7 +619,7 @@ input:focus{
 
   .titulo-saludo{
     width: 90%;
-    margin: 100px auto 120px;
+    margin: 140px auto 150px;
   }
 
   .subtitulo-pie{
