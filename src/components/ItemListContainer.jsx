@@ -5,6 +5,7 @@ import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 import { baseDeDatos } from '../servicios/firebaseConfig';
 import { collection, getDocs, query, where } from 'firebase/firestore';
+import CircleLoader from "react-spinners/CircleLoader";
 
 const ItemListContainer = ({titulo}) => {
 
@@ -74,9 +75,11 @@ const ItemListContainer = ({titulo}) => {
   }, [categoryName]);
 
   if (loading) {
-    return (<div className='contenedor-detalle-items'>
-              <h1>Cargando...</h1>
-            </div>)
+    return (
+      <div className='spiner'>
+        <CircleLoader color={'#120d46'} size={180} />
+      </div>
+    )
   } else {
     return (
       <>
