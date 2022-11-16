@@ -17,8 +17,8 @@ const ItemListContainer = ({titulo}) => {
 
     const collectionProd = collection(baseDeDatos, 'productos');
 
-    if (categoryName === undefined) {
-      getDocs(collectionProd)
+    const obtenerDatos = (collection) => {
+      getDocs(collection)
       .then((res) => {        
         const products = res.docs.map((prod) => {
           return {
@@ -34,42 +34,13 @@ const ItemListContainer = ({titulo}) => {
       .finally(() => {
         setLoading(false);
       })
+    }
 
-      // const getProductos = (categoryName) => {   
-      //   return new Promise((resolv, reject) => {
-      //     const prodFiltrados = productos.filter((prod) => prod.category === categoryName);
-      //     const ref = categoryName ? prodFiltrados : productos;
-      //     setTimeout(() => {
-      //       resolv(ref);
-      //     }, 500);
-      //   });
-      // };
-      // getProductos(categoryName)
-      //   .then((resolv) => {
-      //     setItems(resolv);
-      //   })
-      //   .catch((error) => {
-      //     console.log(error);
-      //   });
-    
+    if (categoryName === undefined) {
+      obtenerDatos(collectionProd);    
     } else {
       const queryCategory = query(collectionProd, where('category', '==', categoryName));
-      getDocs(queryCategory)
-      .then((res) => {        
-        const products = res.docs.map((prod) => {
-          return {
-            id: prod.id,
-            ...prod.data()
-          };
-        });
-        setItems(products);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      })
+      obtenerDatos(queryCategory);
     }
 
   }, [categoryName]);

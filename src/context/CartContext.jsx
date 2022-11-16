@@ -50,6 +50,12 @@ const CartProvider = ({ children }) => {
     })    
     setCart(cartActualizado);
   }
+
+  //Funcion para Sumar Precio
+  const sumarPrecio = () => {
+    const precio = cart.reduce((inicial, actual) => inicial + actual.price * actual.cantidad, 0);
+    return precio || 0;
+  };
   
 
   //Unidades totales del carrito
@@ -65,7 +71,7 @@ const CartProvider = ({ children }) => {
   //variables
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, deleteAll, deleteOne, totalUnidades }}>
+    <CartContext.Provider value={{ cart, addToCart, deleteAll, deleteOne, totalUnidades, sumarPrecio }}>
         {children}
     </CartContext.Provider>
   );

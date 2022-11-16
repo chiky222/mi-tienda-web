@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 
 const Cart = () => {
 
-  const {cart, deleteAll, deleteOne} = useContext(CartContext);
+  const {cart, deleteAll, deleteOne, sumarPrecio} = useContext(CartContext);
 
   if (cart.length !== 0) {
     return (
@@ -22,8 +22,9 @@ const Cart = () => {
           </div>
         ))}
         <div className='total-vaciar'>
-          <h2>Total: ${cart.reduce((inicial, actual) => inicial + actual.price * actual.cantidad, 0)}</h2>
+          <h2>Total: ${sumarPrecio() !== undefined && sumarPrecio()}</h2>
           <button className='buttonAdd' onClick={deleteAll} >Vaciar</button>
+          <Link to='/checkout'><button className='buttonAdd' >Checkout</button></Link>
         </div>
       </div>
     )

@@ -456,6 +456,11 @@ footer{
   padding: -50px;
 }
 
+.texts-cart h2{
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
 .texts-cart button{
   margin-top: -10px;
   margin-bottom: 10px;
@@ -478,14 +483,26 @@ footer{
 
 .total-vaciar button{
   margin-bottom: 50px;
+  text-decoration: none;
+  min-width: 150px;
+}
+
+.total-vaciar a{
+  text-decoration: none;
 }
 
 .cart-vacio{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
+  color: var(--color-blue);
+  text-align: center;
+}
+
+.cart-vacio b{
+  text-decoration: underline;
 }
 
 .cart-vacio a{
@@ -526,6 +543,23 @@ input:focus{
   color: var(--color-blue);
 }
 
+
+/* Form de Orden de Compra */
+.form-ordenCompra{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form-ordenCompra input{
+  min-width: 300px;
+  min-height: 40px;
+  font-size: var(--size-font-text);
+  overflow: hidden;
+  text-decoration: none;
+}
 
 
 /* Media Responsive */
