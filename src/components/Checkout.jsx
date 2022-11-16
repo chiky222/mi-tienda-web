@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { baseDeDatos } from '../servicios/firebaseConfig';
+import { Link } from 'react-router-dom';
 
 const Checkout = () => {
 
@@ -14,7 +15,7 @@ const Checkout = () => {
   const [lastName, setLastName] = useState('');
   const [telefono, setTelefono] = useState('');
   const [direccion, setDireccion] = useState('');
-  const [mail, setMail] = useState('');
+  const [mail, setMail] = useState('mail@gmail.com');
   const [mailConfirm, setMailConfirm] = useState('');
 
   const enviarDatos = (e) => {
@@ -54,7 +55,8 @@ const Checkout = () => {
   if (orderId) {
     return (
       <div className='cart-vacio'>
-        <h1>¡Gracias por tú compra! El código de seguimiento de tu pedido es: <br></br><br></br><b>{orderId}</b></h1>
+        <h1>¡Gracias por tú compra! El código de seguimiento de tu pedido es: <br></br><br></br><b>{orderId}</b><br></br></h1>
+        <Link to='/track'>Seguimiento</Link>
       </div>
     )
   } else {
@@ -66,7 +68,7 @@ const Checkout = () => {
         <input type='text' placeholder='Dirección' name='direccion' value={direccion} onChange={handleDireccion} /><br></br>
         <input type='text' placeholder='Mail' name='mail' value={mail} onChange={handleMail} /><br></br>
         <input type='text' placeholder='Confirme su mail' name='mailConfirm' value={mailConfirm} onChange={handleMailConfirm} /><br></br>
-        <button className='buttonAdd'>Envíar</button>
+        {(mail === mailConfirm) && <button className='buttonAdd'>Envíar</button>}
       </form>
     )
   }

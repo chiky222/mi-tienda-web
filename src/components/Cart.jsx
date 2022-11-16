@@ -32,7 +32,8 @@ const Cart = () => {
     return (
       <div className='cart-vacio'>
         <h2>Aún no agregaste productos al carrito.</h2>
-        <NavLink to='/' >Comenzar a Comprar</NavLink>
+        <NavLink to='/' >Comenzar a Comprar</NavLink><br></br>
+        <NavLink to='/track' >Buscar Orden de Compra</NavLink>
       </div>
     )
   }

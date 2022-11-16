@@ -8,6 +8,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Contact from './components/Contact';
 import CartProvider from './context/CartContext';
 import Checkout from './components/Checkout';
+import Track from './components/Track';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path='/cart' element={ <Cart /> }/>
             <Route path='/contact' element={ <Contact /> }/>
             <Route path='/checkout' element={ <Checkout /> }/>
+            <Route path='/track' element={ <Track /> }/>
           </Routes>
           <Footer />
         </CartProvider>
