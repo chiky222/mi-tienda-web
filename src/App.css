@@ -561,6 +561,35 @@ input:focus{
   text-decoration: none;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  display: none; 
+  margin: 0; 
+}
+
+
+/* Orden de Compra - Formulario y Textos */
+
+.form-track{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 30px;
+}
+
+.detalle-ordenDeCompra{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px 0;
+}
+
+.detalle-ordenDeCompra b{
+  text-decoration: underline;
+}
+
 
 /* Media Responsive */
 
