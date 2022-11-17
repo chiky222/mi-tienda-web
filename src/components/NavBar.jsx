@@ -1,6 +1,7 @@
 import React from 'react';
 import CartWidget from './CartWidget';
 import {GiHamburgerMenu} from 'react-icons/gi';
+import {GoSearch} from 'react-icons/go';
 import {NavLink} from 'react-router-dom';
 import { useState } from 'react';
 
@@ -22,6 +23,7 @@ const NavBar = () => {
             <nav className='nav-header'>
                 <button className='hamb-ico' onClick={hider} ><GiHamburgerMenu /></button>
                 <ul className={show ? 'menu-nav' : 'menu-nav hide'}>
+                    <NavLink className="link-ico" to="/track"><GoSearch /></NavLink>
                     <NavLink className="links" to="/" ><img className='img-menu' src='TiendAR.png' alt='logo'></img></NavLink>
                     <li className='item-menu'><NavLink className="links" to="/">Todas</NavLink></li>
                     <li className='item-menu'><NavLink className="links" to="/category/Oro">Oro</NavLink></li>
