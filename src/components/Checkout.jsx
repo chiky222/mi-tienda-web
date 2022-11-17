@@ -68,7 +68,7 @@ const Checkout = () => {
         <input type='text' placeholder='Dirección' name='direccion' value={direccion} onChange={handleDireccion} /><br></br>
         <input type='text' placeholder='Mail' name='mail' value={mail} onChange={handleMail} /><br></br>
         <input type='text' placeholder='Confirme su mail' name='mailConfirm' value={mailConfirm} onChange={handleMailConfirm} /><br></br>
-        {(mail === mailConfirm) && <button className='buttonAdd'>Envíar</button>}
+        {(mail === mailConfirm) && <button className='buttonAdd'>Comprar</button>}
       </form>
     )
   }
