@@ -7,10 +7,7 @@ const CartProvider = ({ children }) => {
 
   const [cart, setCart] = useState([]);
 
-  //funciones
-
-  const addToCart = (item, cantidad) => {
-        
+  const addToCart = (item, cantidad) => {        
     if (isInCart(item.id)) {
       sumarCantidad(item, cantidad);
     } else {
@@ -18,24 +15,19 @@ const CartProvider = ({ children }) => {
     } 
   };
 
-
-  //funcion para ver si está en el carrito
   const isInCart = (id) => {
     return cart.some((prod) => prod.id === id)
   };
 
-  //funcion para vaciar el carrito
   const deleteAll = () => {
     setCart([])
   };
 
-  //Eliminar un producto
   const deleteOne = (id) => {
     const prodFiltrados = cart.filter((prod) => prod.id !== id);
     setCart(prodFiltrados);
   }
 
-  //Funcion para Sumar Cantidad
   const sumarCantidad = (itemPorAgregar, cantidad) => {
     const cartActualizado = cart.map((prodDelCarrito) => {
       if (itemPorAgregar.id === prodDelCarrito.id) {
@@ -51,14 +43,11 @@ const CartProvider = ({ children }) => {
     setCart(cartActualizado);
   }
 
-  //Funcion para Sumar Precio
   const sumarPrecio = () => {
     const precio = cart.reduce((inicial, actual) => inicial + actual.price * actual.cantidad, 0);
     return precio || 0;
   };
   
-
-  //Unidades totales del carrito
   const totalUnidades = () => {
     let count = 0;
     const copia = [...cart];
@@ -67,8 +56,6 @@ const CartProvider = ({ children }) => {
     })
     return count;
   }
-
-  //variables
 
   return (
     <CartContext.Provider value={{ cart, addToCart, deleteAll, deleteOne, totalUnidades, sumarPrecio }}>

@@ -2,7 +2,7 @@ import React from 'react';
 import { ImPlus, ImMinus } from 'react-icons/im';
 import { useState } from 'react';
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, onAdd }) => {
   
   const [count, setCount] = useState(1);
   
