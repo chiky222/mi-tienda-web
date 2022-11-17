@@ -67,8 +67,6 @@ button{
   align-items: center;
   margin: 0 50px;
   font-size: var(--size-font-menu);
-  font-weight: var(--weight-font-big);
-  text-decoration: none;
   transition: all 0.1s ease-out;
 }
 
@@ -93,7 +91,6 @@ button{
 .cart-ico:hover,
 .item-menu a:hover,
 .item-menu button:hover{
-  transform: scale(1.1, 1.1);
   text-decoration: underline;
   transition: all 0.1s ease-out;
   color: var(--color-pink);
@@ -588,6 +585,37 @@ input[type=number]::-webkit-outer-spin-button {
 
 .detalle-ordenDeCompra b{
   text-decoration: underline;
+}
+
+.link-ico{
+  font-size: var(--size-font-ico);
+  transition: all 0.2s ease-in-out;
+  margin-left: 90px;
+}
+
+.link-ico:hover{
+  transition: all 0.2s ease-in-out;
+  color: var(--color-pink);
+}
+
+.link-ico::before{
+  transition: all 0.1s ease-in-out;
+  opacity: 0;
+}
+
+.link-ico:hover::before{
+  opacity: 1;
+  content: 'Buscar Orden';
+  position: fixed;
+  background: #9c95ff;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  width: 80px;
+  text-align: center;
+  margin-left: -100px;
+  color: var(--color-blue);
+  transition: all 0.1s ease-in-out;
 }
 
 
