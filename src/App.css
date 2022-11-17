@@ -25,9 +25,6 @@ body {
   box-sizing: border-box;
 }
 
-
-/* NavBar */
-
 .nav-header{
   display: flex;
   justify-content: center;
@@ -116,8 +113,6 @@ button{
   margin-left: 50px;
 }
 
-/* Título y Subtítulo */
-
 .titulo-saludo{
   font-size: var(--size-font-title);
   display: flex;
@@ -137,9 +132,6 @@ button{
   text-align: center;
   margin: 80px auto 40px;
 }
-
-
-/* Estilos de Contador */
 
 .visor{
   display: flex;
@@ -207,9 +199,6 @@ button{
 .hide{
   display: none;
 }
-
-
-/* Items & Container */
 
 .spiner{
   display: flex;
@@ -314,8 +303,6 @@ article .visor button{
   color: var(--color-pink);
 }
 
-
-/* Footer */
 footer{
   display: flex;
   position: relative;
@@ -378,9 +365,6 @@ footer{
   box-shadow: 0px 0px 8px 0.5px var(--color-dark-grey);
 }
 
-
-/* Detalle y Visor */
-
 .detail{
   display: flex;
   margin: 50px auto;
@@ -404,9 +388,6 @@ footer{
   margin: 20px 10px 20px;
 }
 
-
-/* Contacto Datos */
-
 .contacto-datos{
   font-size: var(--size-font-text);
   margin: 0 auto 300px;
@@ -416,9 +397,6 @@ footer{
   justify-content: center;
   align-items: center;
 }
-
-
-/* Cart */
 
 .contenedor-cart {
   min-height: 100vh;
@@ -526,7 +504,6 @@ footer{
 .link-carrito a:hover{
   color: #FFF;
 }
-/* Input */
 
 input{
   background-color: rgb(247, 199, 95);
@@ -539,8 +516,6 @@ input:focus{
   color: var(--color-blue);
 }
 
-
-/* Form de Orden de Compra */
 .form-ordenCompra{
   display: flex;
   flex-direction: column;
@@ -562,9 +537,6 @@ input[type=number]::-webkit-outer-spin-button {
   display: none; 
   margin: 0; 
 }
-
-
-/* Orden de Compra - Formulario y Textos */
 
 .form-track{
   display: flex;
@@ -616,9 +588,6 @@ input[type=number]::-webkit-outer-spin-button {
   color: var(--color-blue);
   transition: all 0.1s ease-in-out;
 }
-
-
-/* Media Responsive */
 
 @media screen and (max-width: 1600px) {
   .item-container{
@@ -708,10 +677,26 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: var(--size-font-text);
     margin-bottom: -120px;
   }
+
+  .navbar-footer {
+    min-height: 100px;
+  }
+
+  .navbar-footer p{
+    font-size: 15px;
+  }
+
+  .navbar-footer ul li,
+  .navbar-footer a{
+    font-size: 20px;
+  }
+
+  .navbar-footer svg{
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 800px) {
-/* aca hay que poner el menú del footer vertical */
   .item-container{
     display: flex;
     flex-direction: row;
