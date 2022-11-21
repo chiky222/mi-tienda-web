@@ -4,9 +4,7 @@
 ## E-commerce Comision 45060
 <br>
 
-<video width="1280" height="720" controls>
-  <source src="https://res.cloudinary.com/dyfvpilfz/video/upload/v1669059971/2022-11-21_16-06-47_wgh3dn.mp4" type="video/mp4">
-</video>
+![Gif eNeFeTe](public/GIFenefete.gif)
 
 Este proyecto fue creado para el curso de **React Js**.
 Se trata de un E-commerce ficticio de _NFT sobre Messi_.
