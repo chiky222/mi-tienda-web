@@ -1,25 +1,35 @@
 # Messi Hollywood
+<br>
+
 ## E-commerce Comision 45060
+<br>
 
+![Gif eNeFeTe](public/enefete.gif)
 
-Este proyecto fue creado para el curso de React.
-Se trata de un E-commerce de NFT sobre Messi.
+Este proyecto fue creado para el curso de **React Js**.
+Se trata de un E-commerce ficticio de _NFT sobre Messi_.
 
-Alumno: Cristian<br>
-Profesor: Eric Wajnrajch
+**Alumno:** Cristian Ferrer<br>
+**Profesor:** Eric Wajnrajch
 
 ![](./public/TiendAR.png)
 
 Link para ver el proyecto deployado
-[Messi eNeFeTe.](http://messi-enefete.netlify.com)
+_[Messi eNeFeTe.](http://messi-enefete.netlify.com)_
+<br>
+<br>
 
 
 ## Librerías utilizadas
 
--   [react-router-dom](https://reactrouter.com/en/main): Se utilizó para crear las rutas de navegación de la página.
--   [Firebase](https://firebase.google.com/): Lo utilicé para alojar los productos con sus distintas propiedades, así como también se guardan las ordenes de compra que cargan los usuarios.
--   [React-spinners](https://www.npmjs.com/package/react-spinners): Fue empleado para introducir una animación en el loading de los productos obtenidos desde Firebase.
--   [React-icons](https://react-icons.github.io/react-icons/): Se utilizó para los íconos del carrito y de la búsqueda por número de orden. También para los íconos de las redes sociales.
+| Librería | Utilización |
+| --- | --- |
+|[react-router-dom](https://reactrouter.com/en/main)| Se utilizó para crear las rutas de navegación de la página. |
+|[Firebase](https://firebase.google.com/)| Lo utilicé para alojar los productos con sus distintas propiedades, así como también se guardan las ordenes de compra que cargan los usuarios.|
+|[React-spinners](https://www.npmjs.com/package/react-spinners)| Fue empleado para introducir una animación en el loading de los productos obtenidos desde Firebase.|
+|[React-icons](https://react-icons.github.io/react-icons/)| Se utilizó para los íconos del carrito y de la búsqueda por número de orden. También para los íconos de las redes sociales.|
+<hr>
+<br>
 
 ## Funcionalidades que tiene el proyecto
 
@@ -29,22 +39,26 @@ Link para ver el proyecto deployado
 - Visualizar los productos en el carrito, así como el total de unidades y también el precio total.
 - Hacer el Checkout para generar la orden de compra ficticia, que se enviará a Firebase con los datos ingresados.
 - Buscar por código la Orden de Compra generada y visualizar los productos que contiene.
+<br>
+<hr>
+<br>
 
 ## Pasos para levantar el proyecto en local
+<br>
 
-1.  Clonar el repositorio
+1.  **Clonar el repositorio**
 
 ```
 git clone https://github.com/EricWaje/comision-45060.git
 ```
 
-2. Instalar las dependencias
+2. **Instalar las dependencias**
 
 ```
 npm install
 ```
 
-3. Correr el proyecto en el navegador
+3. **Correr el proyecto en el navegador**
 
 ```
 npm start
