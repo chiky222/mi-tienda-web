@@ -29,7 +29,7 @@ function App() {
         </CartProvider>
       </BrowserRouter>
     </>
-  );
+  ); 
 }
 
 export default App; 
