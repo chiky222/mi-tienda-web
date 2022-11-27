@@ -26,15 +26,7 @@ function App() {
             <Route path='/track' element={ <Track /> }/>
           </Routes>
           <Footer />
-        </CartProvider>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={ <ItemListContainer titulo='Colección NFT de Messi Hollywood' />}/>
-          <Route path='/category/:categoryName' element={ <ItemListContainer titulo='Colección NFT de Messi Hollywood' />}/>
-          <Route path='/detail/:idProd' element={ <ItemDetailContainer />}/>
-          <Route path='/cart' element={ <Cart /> }/>
-          <Route path='/contact' element={ <Contact /> }/>
-        </Routes>
+        </CartProvider>             
         <Footer />
       </BrowserRouter>
     </>
