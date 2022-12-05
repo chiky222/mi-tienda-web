@@ -49,7 +49,7 @@ _[Messi eNeFeTe.](http://messi-enefete.netlify.com)_
 1.  **Clonar el repositorio**
 
 ```
-git clone https://github.com/EricWaje/comision-45060.git
+git clone https://github.com/chiky222/mi-tienda-web.git
 ```
 
 2. **Instalar las dependencias**
